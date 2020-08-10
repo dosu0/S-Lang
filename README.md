@@ -20,3 +20,7 @@ Then Press Download Zip from the dropdown:
 **Coming Soon**
 
 ## Running
+
+In your terminal, type:
+
+`python3 Main.py YourCode.txt`
