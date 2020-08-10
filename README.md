@@ -5,7 +5,7 @@ S-Lang is a modern programming language developed in Python 3.
 
 *"S-Lang"* stands for SimpleLanguage because, as the name suggests, it is intended to be simple to use.
 
-# Running
+# Demo
 
 [![Run on Repl.it](https://repl.it/badge/github/Platinum-Phoenix/S-Lang)](https://repl.it/github/Platinum-Phoenix/S-Lang)
 
