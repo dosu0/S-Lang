@@ -33,7 +33,7 @@ def ParseLine(line):
             if scanned[1] == "var":
                 variables[scanned[2]] = 0
             elif scanned[1] == "list":
-                print("Lists are a feauture coming soon")
+                errors.append("Lists do not have functionality")
             else:
                 errors.append("Error: Unkown Data Structure/Type " + scanned[1])
         elif scanned[0] == "set":
@@ -51,19 +51,19 @@ def ParseLine(line):
 ## Compile ##
 def Compile(fileName):
     ScanFile(fileName)
-    print(lines)
     outputs.clear()
     for i in range(len(lines)):
         ScanLine(i)
         ParseLine(i)
-    errorlog = open("errorlog.txt", "w")
+    #errorlog = open("errorlog.txt", "w")
 
     for error in errors:
-        errorlog.write(error + " \n")
-    errorlog.close()
+        #errorlog.write(error + "\n")
+        print(error)
+    #errorlog.close()
     
-    outputlog = open("output.txt", "w")
-    print(outputs)
+    #outputlog = open("output.txt", "w")
     for output in outputs:
-        outputlog.write(str(eval(output)) + "\n")
-    outputlog.close()
+        print("Output: " + str(eval(output)))
+        #outputlog.write(str(eval(output)) + "\n")   
+    #outputlog.close()
