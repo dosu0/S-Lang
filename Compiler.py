@@ -1,5 +1,3 @@
-import tkinter as tk
-import tkinter.font as font
 #Initilize Vars
 lines = []
 scanned = []
@@ -34,8 +32,10 @@ def ParseLine(line):
         if scanned[0] == "create":
             if scanned[1] == "var":
                 variables[scanned[2]] = 0
+            elif scanned[1] == "list":
+                print("Lists are a feauture coming soon")
             else:
-                errors.append("Error: Unkown Object " + scanned[1])
+                errors.append("Error: Unkown Data Structure/Type " + scanned[1])
         elif scanned[0] == "set":
              variables[scanned[1]] = scanned[3]
         
@@ -48,13 +48,9 @@ def ParseLine(line):
                     outputs[len(outputs)-1] = outputs[len(outputs)-1] + word
     else:
         errors.append("Error: Unkown token: " + '"' + scanned[0] + '" ' + "on line #" + str(line)) 
-
-    
-
-
 ## Compile ##
-def compile():
-    ScanFile("Code.txt")
+def Compile(fileName):
+    ScanFile(fileName)
     print(lines)
     outputs.clear()
     for i in range(len(lines)):
@@ -67,44 +63,7 @@ def compile():
     errorlog.close()
     
     outputlog = open("output.txt", "w")
-
+    print(outputs)
     for output in outputs:
         outputlog.write(str(eval(output)) + "\n")
     outputlog.close()
-
-
-#Start of Main
-compile()
-
-#Window Script
-window = tk.Tk(className="s-lang hub")
-
-titleFont = font.Font(size=30)
-title = tk.Label(
-    text="Welcome to S-lang"
-)
-title['font'] = titleFont
-
-
-description = tk.Label(
-    text="S-lang is a simple programming language"
-)
-
-entry = tk.Entry(
-)
-fileName = entry.get()
-
-compilebutton = tk.Button(
-    text="Compile"
-)
-textBox = tk.Text()
-description.pack()
-compilebutton.pack()
-entry.pack()
-textBox.pack()
-
-print(fileName)
-window.mainloop()
-window.destroy()
-
-
