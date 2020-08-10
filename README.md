@@ -4,7 +4,7 @@
 S-Lang is a modern programming language developed in Python 3 
 *"S-Lang"* stands for SimpleLanguage because, as the name suggests, it is intended to be simple to use.
 
-## Try it yourself
+## Installation
 
 ### Mac OS 10.xx
 
@@ -18,3 +18,5 @@ Then Press Download Zip from the dropdown:
 
 ### Windows
 **Coming Soon**
+
+## Running
