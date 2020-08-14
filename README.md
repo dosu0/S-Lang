@@ -7,6 +7,8 @@ S-Lang is a modern programming language developed in Python 3.
 
 # Demo
 
+The current compiler is not functional but when it is you can try it out here:
+
 [![Run on Repl.it](https://repl.it/badge/github/Platinum-Phoenix/S-Lang)](https://repl.it/github/Platinum-Phoenix/S-Lang)
 
 ## More info
