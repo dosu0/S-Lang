@@ -2,6 +2,8 @@ import string
 lines = []
 scannedLine = []
 
+#Test
+
 
 #File Scanner
 def ScanFile(filename):
