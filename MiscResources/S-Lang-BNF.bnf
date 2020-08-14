@@ -1,0 +1,38 @@
+# BNF
+
+program ::= stmtLst
+
+stmtLst ::= 
+    stmt | 
+    stmtLst
+
+stmt ::= 
+    create object ident | 
+    set ident to expr|
+    output expr
+
+object ::= 
+    'var' | 
+    'list' |
+    'class'
+ident ::=
+    str
+
+bool ::=
+    true |
+    false |
+    exp '=' exp?
+
+expr ::= 
+    int |
+    str |
+    indent |
+    expr op expr |
+
+oper ::= '+' | '-' | '*' | '/' | '**'
+
+int ::= ['0' - '9']*
+
+str ::= 
+    int |
+    ['a' - 'z', 'A' - 'Z']*

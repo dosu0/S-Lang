@@ -1,6 +1,8 @@
 #Main
-import Compiler
+import CompilerV2
+import CompilerV1
 import sys
 
 
-Compiler.Compile(sys.argv[1])
+#CompilerV1.Compile(sys.argv[1])
+CompilerV2.compile("ExampleCode.sl")
