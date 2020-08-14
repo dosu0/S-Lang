@@ -1,2 +1,3 @@
+# This is the file that allows the language to be previewed in repl.it
 language = "python3"
-run = "python Main.py ExampleCode.sl"
+run = "python Main.py ExampleCode.slang"
