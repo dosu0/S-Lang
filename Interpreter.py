@@ -1,9 +1,9 @@
 import string
 lines = []
 scannedLine = []
-
+alphnum = string.ascii_letters + string.digits + "_"
 #File Scanner
-def ScanFile(filename):
+def scan(filename):
     file = open(filename, "r")
 
     for line in file:
@@ -20,27 +20,29 @@ def ScanFile(filename):
     file.close()
 
 
-def scanLine(line):
-    scanned = []
-    for word in line:
-        scanned.append(getType(word))
-    return scanned
+def Parse(line):
+    statement(0)
 
+def statement(linenum):
+    tok = lines[linenum][0]
+    
+    if tok == "ID":
+        ""
 
 def compile(filename):
-    ScanFile(filename)
-    for line in lines:
-        print(scanLine(line))
+    scan(filename)
+    statement(0)
+    
+    
 
 
-def getType(word):
+def getTok(word):
     # Operation Check
     if word in ['+', '-', '*', '/', '**']:
         return "oper"
 
     # Int Check no decimals
     isInt = True
-    isDecimal = False
     for letter in word:
         if letter not in string.digits:
             isInt = False
@@ -51,7 +53,7 @@ def getType(word):
     #string check
     isString = True
     for letter in word:
-        if letter not in string.ascii_letters:
+        if letter not in alphnum:
             isString = False
             break
     if isString == True:

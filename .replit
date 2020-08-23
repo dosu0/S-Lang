@@ -1,3 +1,7 @@
-# This is the file that allows the language to be previewed in repl.it
+# Repl Launch Helper
+
 language = "python3"
+
+# In your terminal you would run this script:
+
 run = "python Main.py ExampleCode.slang"

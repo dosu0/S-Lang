@@ -1,8 +1,7 @@
 #Main
-import CompilerV2
-import CompilerV1
+import Interpreter
 import sys
 
 
 #CompilerV1.Compile(sys.argv[1])
-CompilerV2.compile("ExampleCode.slang")
+Interpreter.compile("ExampleCode.slang")
