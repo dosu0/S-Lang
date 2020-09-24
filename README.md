@@ -1,4 +1,7 @@
 # S-lang
+Archived
+
+see [here](https://github.com/Platinum-Phoenix/S-Lang) for an updated one written instead in C++
 
 ## Overview
 S-Lang is a modern programming language developed in Python 3. 
